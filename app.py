@@ -1,6 +1,6 @@
 ### Before running the code please install requirements.txt using the command
 # pip install -r requirements.txt
-
+# Also change the path in line 13 'sqlite:///{path_name}/instagram_clone.db'
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -9,7 +9,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-# Configurations
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/apple/Desktop/deepsolv/instagram_clone.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = 'INSTAGRAM_BACKEND_CLONE'
